@@ -26,7 +26,6 @@
         document.getElementById('contactlink').className = "notselected";
         document.getElementById('testimonialslink').className = "notselected";
         document.getElementById('faqlink').className = "notselected";
-        document.getElementById('publicationslink').className = "notselected";
         document.getElementById(link).className = "selected";
       }
     </script>
@@ -35,6 +34,7 @@
   
   <body lang="en">
     <div id="fb-root"></div>
+    <script>(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 
     <header>
       <h1>Maths Makes My Day</h1>
@@ -49,7 +49,7 @@
         <li onclick="changeClass('contactlink', 'contact')"><a href="#contact" id="contactlink" class="notselected">Contact</a></li>
         <li onclick="changeClass('testimonialslink', 'testimonials')"><a href="#testimonials" id="testimonialslink" class="notselected">Testimonials</a></li>
         <li onclick="changeClass('faqlink', 'faq')"><a href="#faq" id="faqlink" class="notselected">FAQ</a></li>
-        <li onclick="changeClass('publicationslink', 'publications')"><a href="#publications" id="publicationslink" class="notselected">Publications</a></li>
+        <li><a href="publications.html">Publications</a></li>
       </ul>
     </nav>
     <section id="home">
@@ -188,27 +188,6 @@
       <p>I can accept cash and EFT payments.</p>
       <h4>Will I be provided with a receipt?</h4>
       <p>Yes. (Unless you don't want one, in which case I am happy to save paper.)</p>
-    </section>
-    <section id="publications">
-      <h3>Publications</h3>
-      <ul id="pubs">
-        <li>B. Afra, K. Nordlund, M. D. Rodriguez, <strong>T. Bierschenk</strong>, C. Trautmann, S. Mudie, and P. Kluth, <cite>Thermal response of nanoscale cylindrical inclusions of amorphous silica embedded in α-quartz</cite>, Physical Review B, 90(2014)224108.</li>
-        <li><strong>T. Bierschenk</strong>, B. Afra, M.D. Rodriguez, R. Giulian, C. Trautmann, S. Mudie, M.C. Ridgway, and P. Kluth, <cite>Effect of electronic energy loss on ion track formation in amorphous Ge</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)113.</li>
-        <li>D. Schauries, B. Afra, <strong>T. Bierschenk</strong>, M. Lang, M. D. Rodriguez, C. Trautmann, W. Li, R.C. Ewing, and P. Kluth, <cite>The shape of ion tracks in natural apatite</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)117.</li>
-        <li>B. Afra, M. Lang, <strong>T. Bierschenk</strong>, M. D. Rodriguez, W. J. Weber, C. Trautmann, R.C. Ewing, N. Kirby, and P. Kluth, <cite>Annealing behavior of ion tracks in olivine, apatite and britholite</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)126.</li>
-        <li>M. D. Rodriguez W. Li, F. Chen, C. Trautmann, <strong>T. Bierschenk</strong>, D. Schauries, R.C. Ewing, S.T. Mudie, and P. Kluth, <cite>SAXS and TEM investigation of ion tracks in neodymium-doped yttrium aluminium garnet</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)150.</li>
-        <li>P. Kluth, J. Sullivan, W. Li, R. Weed, C. S. Schnohr, R. Giulian, L. L. Araujo, W. Lei, M. D. Rodriguez, B. Afra, <strong>T. Bierschenk</strong>, R.C. Ewing, and M. C. Ridgway, <cite>Nano-porosity in GaSb induced by swift heavy ion irradiation</cite>, Applied Physics Letters, 104(2014)023105.</li>
-        <li>T. Steinbach , <strong>Th. Bierschenk</strong>, S. Milz, M.C. Ridgway and W. Wesch, <cite>Swift heavy ion irradiation of crystalline CdTe</cite>, Journal of Physics D: Applied Physics, 47(2014)065301.</li>
-        <li><strong>T. Bierschenk</strong>, R. Giulian, B. Afra, M. D. Rodriguez, D. Schauries, S. Mudie, O. H. Pakarinen, F. Djurabekova, K. Nordlund, O. Osmani, N. Medvedev, B. Rethfeld, M. C. Ridgway, and P. Kluth, <cite>Latent ion tracks in amorphous silicon</cite>, Physical Review B, 88(2013)174111.</li>
-        <li>M.C. Ridgway, <strong>T. Bierschenk</strong>, R. Giulian, B. Afra, M.D. Rodriguez, L.L. Araujo, A.P. Byrne, N. Kirby, O.H. Pakarinen, F. Djurabekova, K. Nordlund, M. Schleberger, O. Osmani, N. Medvedev, B. Rethfeld, and P. Kluth, <cite>Tracks and Voids in Amorphous Ge Induced by Swift Heavy-Ion Irradiation</cite>, Physical Review Letters, 110(2013)245502.</li>
-        <li>B. Afra, M.D. Rodriguez, C. Trautmann, O.H. Pakarinen, F. Djurabekova, K. Nordlund, <strong>T. Bierschenk</strong>, R. Giulian, M.C. Ridgway, G. Rizza, N. Kirby, M. Toulemonde, and P. Kluth, <cite>SAXS investigations of the morphology of swift heavy ion tracks in α-quartz</cite>, Journal of Physics: Condensed Matter, 25(2013)045006.</li>
-        <li>S. Decoster, B. Johannessen, C. J. Glover, S. Cottenier, <strong>T. Bierschenk</strong>, H. Salama, F. Kremer, K. Temst, A. Vantomme, and M. C. Ridgway, <cite>Direct observation of substitutional Ga after ion implantation in Ge by means of extended x-ray absorption fine structure</cite>, Applied Physics Letters, 101(2012)261904.</li>
-        <li>M.D. Rodriguez, C. Trautmann, M. Toulemonde, B. Afra, <strong>T. Bierschenk</strong>, R. Giulian, N. Kirby, and P. Kluth, <cite>Modification of Fe-B based metallic glasses using swift heavy ions</cite>, EPJ Web of Conferences, 35(2012)03004.</li>
-        <li>E. Wendler, <strong>Th. Bierschenk</strong>, F. Felgenträger, J. Sommerfeld, W. Wesch, D. Alber, G. Bukalis, L.C. Princloo, N.G. van der Berg, E. Friedland, and J. B. Malherbe, <cite>Damage formation and optical absorption in neutron irradiated SiC</cite>, Nuclear Instruments and Methods in Physics Research B, 286(2012)97.</li>
-        <li>E. Wendler, Ph. Schöppe, <strong>Th. Bierschenk</strong>, St. Milz, W. Wesch, N.G. van der Berg, E. Friedland, and J. B. Malherbe, <cite>Damage formation in SiC ion implanted at 625 K</cite>, Nuclear Instruments and Methods in Physics Research B, 286(2012)93.</li>
-        <li>M.D. Rodriguez, B. Afra, C. Trautmann, M. Toulemonde, <strong>T. Bierschenk</strong>, J. Leslie, R. Giulian, N. Kirby, and P. Kluth, <cite>Morphology of swift heavy ion tracks in metallic glasses</cite>, Journal of Non-Crystalline Solids, 358(2011)571.</li>
-        <li>E. Wendler, <strong>Th. Bierschenk</strong>, W. Wesch, E. Friedland, and J. B. Malherbe, <cite>Temperature dependence of damage formation in Ag ion irradiated 4H-SiC</cite>, Nuclear Instruments and Methods in Physics Research B, 268(2010)2996.</li>
-      </ul>
     </section>
     <footer>
       <!--Skype button-->
