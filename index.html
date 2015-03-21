@@ -6,224 +6,43 @@
     <meta name="description" content="Thomas Bierschenk, tutor in maths, physics and conversational German">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Righteous' rel='stylesheet' type='text/css'>
-    <style>
-    /*****Page Design*****/
-    
-    body {
-      font-family: 'Righteous', cursive;
-      margin: 0;
-      background-color: #0c4c4b;
-    }
-    header, nav, footer, section {
-      background-color: seashell;
-      max-width: 800px;
-      box-sizing: border-box;
-      padding: 20px;
-      margin: 10px auto;
-      border-radius: 10px;
-      border: 1px #083231;
-      box-shadow: 2px 2px 2px 2px #083231;
-    }
-    
-    /*****Element Design*****/
-    
-    header, nav, footer, h1, h2, h3 {
-      text-align: center;
-    }
-    header, nav, h1, h2, em {
-      font-family: 'Permanent Marker', cursive;
-    }
-    nav {
-      font-size: 1.1em;
-    }
-    nav ul {
-      padding: 0;
-    }
-    nav li {
-      display: inline-block;
-      list-style: none;
-      padding: 10px;
-    }
-    a {
-      color: black;
-      text-decoration: none;
-    }
-    a:hover, a:focus {
-      color: #0c4c4b;
-      font-weight: bold;
-    }
-    #contactlist li {
-      list-style: none;
-      padding: 10px;
-    }
-    p {
-      text-align: justify;
-    }
-    form {
-      padding: 10px;
-      margin: 10px auto;
-    }
-    input {
-      width: 100%;
-      margin: 5px auto;
-    }
-    textarea {
-      width: 100%;
-      height: 100px;
-      margin: 5px auto;
-    }
-    button {
-      display: block;
-      padding: 10px 20px;
-      margin: 10px auto;
-      border-radius: 10px;
-      border: 1px #083231;
-      box-shadow: 2px 2px 2px 2px #083231;
-      background-color: #0c4c4b;
-      color: seashell;
-      font-weight: bold;
-    }
-    #tbphoto {
-      max-width: 100%;
-      width: 115px;
-      border-radius: 50%;
-      float: left;
-      margin: 10px 20px 20px 0px;
-    }
-    #aboutlist {
-      margin-left: 115px;
-    }
-    #aboutlist {
-      list-style: none;
-    }
-    #pubs {
-      padding: 0px;
-    }
-    #pubs li {
-      list-style: none;
-      padding: 1em 0;
-      text-align: justify;
-    }
-    
-    /*****Social Media*****/
-    
-    #twitter, #fb-like, #SkypeButton_Call_MathMakesMyDay_1 {
-      display: inline-block;
-      margin: auto;
-      padding: 0 10px;
-    }
-    #fb-like {
-      vertical-align: 4px;
-    }
-    #SkypeButton_Call_MathMakesMyDay_2 img, #SkypeButton_Call_MathMakesMyDay_1 img, #SkypeButton_Call_MathMakesMyDay_2 p, #SkypeButton_Call_MathMakesMyDay_1 p {
-        margin: 0 !important;
-        vertical-align: inherit !important;
-    }
-    
-    /*****Responsive Design*****/
-    
-    @media (max-width: 850px){
-      #contactlist {
-        padding: 0px;
-      }
-      header, nav, footer, section {
-        width: 90%;
-        padding: 10px;
-      }
-    }
-    @media (max-width: 320px){
-      header, nav, footer, section {
-        padding: 5px;
-      }
-      h1 {
-        1.8em;
-      }
-      h2 {
-        1.4em;
-      }
-      /*nav {
-        font-size: 1em;
-      }*/
-      #contactlist li {
-        padding: 5px 0px;
-      }
-      p {
-      text-align: left;
-      }
-      header, nav, footer, section {
-        width: 90%;
-      }
-      nav li {
-        padding: 5px;
-      }
-    }
-    
-    /*****Animation Design*****/
-    /*
-    @keyframes
-    @-webkit-keyframes
-    */
-    .selected {
-      color: #0c4c4b;
-    }
-    .show {
-      display: block;
-    }
-    .hide {
-      display: none;
-    }
-  </style>
-    </noscript>
+    <link href="tutoring.css" rel="stylesheet" type="text/css">
+    <!--Google Analytics-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-60782696-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <script>
-      function changeClass(link, section){
-        document.getElementById('homelink').className = "notselected";
-        document.getElementById('tutoringlink').className = "notselected";
-        document.getElementById('contactlink').className = "notselected";
-        document.getElementById('testimonialslink').className = "notselected";
-        document.getElementById('publicationslink').className = "notselected";
-        document.getElementById(link).className = "selected";
-        document.getElementById('home').className = "hide";
-        document.getElementById('tutoring').className = "hide";
-        document.getElementById('contact').className = "hide";
-        document.getElementById('testimonials').className = "hide";
-        document.getElementById('publications').className = "hide";
-        document.getElementById(section).className = "show";
-      }
-    </script>
+    <!--Skype-->
+    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
     <title>Maths Makes My Day | Maths, Science and German tutoring</title>
   </head>
+  
   <body lang="en">
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <script>(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+
     <header>
       <h1>Maths Makes My Day</h1>
       <h2>Let Maths Make Your Day Too</h2>
     </header>
+    
     <nav>
       <ul>
-        <li onclick="changeClass('homelink', 'home')"><a href="#home" id="homelink" class="selected">Home</a></li>
-        <li onclick="changeClass('tutoringlink', 'tutoring')"><a href="#tutoring" id="tutoringlink" class="notselected">Tutoring</a></li>
-        <li onclick="changeClass('contactlink', 'contact')"><a href="#contact" id="contactlink" class="notselected">Contact</a></li>
-        <li onclick="changeClass('testimonialslink', 'testimonials')"><a href="#testimonials" id="testimonialslink" class="notselected">Testimonials</a></li>
-        <li onclick="changeClass('publicationslink', 'publications')"><a href="#publications" id="publicationslink" class="notselected">Publications</a></li>
+        <li><a href="#home" class="selected">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutoring.html">Tutoring</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="publications.html">Publications</a></li>
       </ul>
     </nav>
-    <section id="home" class="show">
+    <section id="home">
       <h3>Welcome to Maths Makes My Day.</h3>
       <ul>
       <li>Are you looking for help with maths and physics?</li>
@@ -233,74 +52,6 @@
       <li>Would you like to discuss maths or physics in German?</li>
       </ul>
       <p>Then you have found the right place.</p>
-    </section>
-    <section id="tutoring" class="hide">
-      <h3>Tutoring</h3>
-      <p>Hi, I'm Dr Thomas Biershenk, and I love maths and science. I have a PhD in physics and I am a native German speaker, so I can offer tutoring in the following subjects:</p>
-      <ul>
-        <li>Mathematics</li>
-        <ul>
-          <li>primary school</li>
-          <li>secondary school</li>
-          <li>undergraduate</li>
-        </ul>
-        <li>Science</li>
-        <ul>
-          <li>primary school</li>
-          <li>secondary school</li>
-          <li>undergraduate</li>
-        </ul>
-        <li>Physics</li>
-        <ul>
-          <li>secondary school</li>
-          <li>undergraduate</li>
-          <li>postgraduate</li>
-        </ul>
-        <li>German</li>
-        <ul>
-          <li>conversational skills</li>
-          <li>maths and science vocabulary</li>
-        </ul>
-      </ul>
-      <p>For all subjects I offer a home tutoring service for the Frankston, Dandenong and Cranbourne areas, and online tutoring sessions using Skype. Tutoring sessions are possible as the traditional one-on-one or in small groups with up to 5 students if you and your friends want to work through certain problems together.</p>
-      <p>My tutoring services include, but are not limited to, homework support, exam preparation, general understanding, and experiments.</p>
-    </section>
-    <section id="contact" class="hide">      
-      <h3>Contact</h3>
-      <p>To discuss your tutoring needs, please contact me on any of the following:</p>
-      <ul id="contactlist">
-        <li><a href="tel:+61459219777">Mobile: (+61) 0459 219 777</a></li>
-        <li><a href="mailto:bierschenk.thomas@gmail.com">Email: bierschenk.thomas@gmail.com</a></li>
-        <li><div id="SkypeButton_Call_MathMakesMyDay_2"><script type="text/javascript">Skype.ui({"name": "chat","element": "SkypeButton_Call_MathMakesMyDay_2","participants": ["MathMakesMyDay"],"imageSize": 32});</script></div></li>
-      </ul>
-    </section>
-    <section id="testimonials" class="hide">      
-      <h3>Testimonials</h3>
-      <p>"I am an international PhD student and found it difficult to understand some concepts and theories. Thomas made my life easier as he explained to me every thing in detail with incredible understanding. I really enjoy the way he teaches and his kindness. In some session we only could communicate via email but even then I had no difficulties understanding Thomas' explanations, it was almost as if I was sitting in front of him."
-      <br>&mdash; Huda</p>
-      <p>"After practising German with Thomas I was able to travel alone through Germany without relying on phrase books or translators. A lot of people think everyone in Germany speaks English, but it isn't true. I would have made a lot of errors if it wasn't for all of the cultural tips Thomas included in his lessons."
-      <br>&mdash; Catherine</p>
-    </section>
-    <section id="publications" class="hide">
-      <h3>Publications</h3>
-      <ul id="pubs">
-        <li>B. Afra, K. Nordlund, M. D. Rodriguez, <strong>T. Bierschenk</strong>, C. Trautmann, S. Mudie, and P. Kluth, <cite>Thermal response of nanoscale cylindrical inclusions of amorphous silica embedded in α-quartz</cite>, Physical Review B, 90(2014)224108.</li>
-        <li><strong>T. Bierschenk</strong>, B. Afra, M.D. Rodriguez, R. Giulian, C. Trautmann, S. Mudie, M.C. Ridgway, and P. Kluth, <cite>Effect of electronic energy loss on ion track formation in amorphous Ge</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)113.</li>
-        <li>D. Schauries, B. Afra, <strong>T. Bierschenk</strong>, M. Lang, M. D. Rodriguez, C. Trautmann, W. Li, R.C. Ewing, and P. Kluth, <cite>The shape of ion tracks in natural apatite</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)117.</li>
-        <li>B. Afra, M. Lang, <strong>T. Bierschenk</strong>, M. D. Rodriguez, W. J. Weber, C. Trautmann, R.C. Ewing, N. Kirby, and P. Kluth, <cite>Annealing behavior of ion tracks in olivine, apatite and britholite</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)126.</li>
-        <li>M. D. Rodriguez W. Li, F. Chen, C. Trautmann, <strong>T. Bierschenk</strong>, D. Schauries, R.C. Ewing, S.T. Mudie, and P. Kluth, <cite>SAXS and TEM investigation of ion tracks in neodymium-doped yttrium aluminium garnet</cite>, Nuclear Instruments and Methods in Physics Research B, 326(2014)150.</li>
-        <li>P. Kluth, J. Sullivan, W. Li, R. Weed, C. S. Schnohr, R. Giulian, L. L. Araujo, W. Lei, M. D. Rodriguez, B. Afra, <strong>T. Bierschenk</strong>, R.C. Ewing, and M. C. Ridgway, <cite>Nano-porosity in GaSb induced by swift heavy ion irradiation</cite>, Applied Physics Letters, 104(2014)023105.</li>
-        <li>T. Steinbach , <strong>Th. Bierschenk</strong>, S. Milz, M.C. Ridgway and W. Wesch, <cite>Swift heavy ion irradiation of crystalline CdTe</cite>, Journal of Physics D: Applied Physics, 47(2014)065301.</li>
-        <li><strong>T. Bierschenk</strong>, R. Giulian, B. Afra, M. D. Rodriguez, D. Schauries, S. Mudie, O. H. Pakarinen, F. Djurabekova, K. Nordlund, O. Osmani, N. Medvedev, B. Rethfeld, M. C. Ridgway, and P. Kluth, <cite>Latent ion tracks in amorphous silicon</cite>, Physical Review B, 88(2013)174111.</li>
-        <li>M.C. Ridgway, <strong>T. Bierschenk</strong>, R. Giulian, B. Afra, M.D. Rodriguez, L.L. Araujo, A.P. Byrne, N. Kirby, O.H. Pakarinen, F. Djurabekova, K. Nordlund, M. Schleberger, O. Osmani, N. Medvedev, B. Rethfeld, and P. Kluth, <cite>Tracks and Voids in Amorphous Ge Induced by Swift Heavy-Ion Irradiation</cite>, Physical Review Letters, 110(2013)245502.</li>
-        <li>B. Afra, M.D. Rodriguez, C. Trautmann, O.H. Pakarinen, F. Djurabekova, K. Nordlund, <strong>T. Bierschenk</strong>, R. Giulian, M.C. Ridgway, G. Rizza, N. Kirby, M. Toulemonde, and P. Kluth, <cite>SAXS investigations of the morphology of swift heavy ion tracks in α-quartz</cite>, Journal of Physics: Condensed Matter, 25(2013)045006.</li>
-        <li>S. Decoster, B. Johannessen, C. J. Glover, S. Cottenier, <strong>T. Bierschenk</strong>, H. Salama, F. Kremer, K. Temst, A. Vantomme, and M. C. Ridgway, <cite>Direct observation of substitutional Ga after ion implantation in Ge by means of extended x-ray absorption fine structure</cite>, Applied Physics Letters, 101(2012)261904.</li>
-        <li>M.D. Rodriguez, C. Trautmann, M. Toulemonde, B. Afra, <strong>T. Bierschenk</strong>, R. Giulian, N. Kirby, and P. Kluth, <cite>Modification of Fe-B based metallic glasses using swift heavy ions</cite>, EPJ Web of Conferences, 35(2012)03004.</li>
-        <li>E. Wendler, <strong>Th. Bierschenk</strong>, F. Felgenträger, J. Sommerfeld, W. Wesch, D. Alber, G. Bukalis, L.C. Princloo, N.G. van der Berg, E. Friedland, and J. B. Malherbe, <cite>Damage formation and optical absorption in neutron irradiated SiC</cite>, Nuclear Instruments and Methods in Physics Research B, 286(2012)97.</li>
-        <li>E. Wendler, Ph. Schöppe, <strong>Th. Bierschenk</strong>, St. Milz, W. Wesch, N.G. van der Berg, E. Friedland, and J. B. Malherbe, <cite>Damage formation in SiC ion implanted at 625 K</cite>, Nuclear Instruments and Methods in Physics Research B, 286(2012)93.</li>
-        <li>M.D. Rodriguez, B. Afra, C. Trautmann, M. Toulemonde, <strong>T. Bierschenk</strong>, J. Leslie, R. Giulian, N. Kirby, and P. Kluth, <cite>Morphology of swift heavy ion tracks in metallic glasses</cite>, Journal of Non-Crystalline Solids, 358(2011)571.</li>
-        <li>E. Wendler, <strong>Th. Bierschenk</strong>, W. Wesch, E. Friedland, and J. B. Malherbe, <cite>Temperature dependence of damage formation in Ag ion irradiated 4H-SiC</cite>, Nuclear Instruments and Methods in Physics Research B, 268(2010)2996.</li>
-      </ul>
     </section>
     <footer>
       <!--Skype button-->
@@ -312,7 +63,6 @@
       <div id="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mathsmakesmyday.com/">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
       <!--Google button-->
       <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'en-GB'}</script><div class="g-plusone" data-size="medium"></div>
-      <br>&copy; Thomas Bierschenk
     </footer>
   </body>
 <html>
