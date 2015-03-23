@@ -17,18 +17,7 @@
       ga('send', 'pageview');
     </script>
     <!--Skype-->
-    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-    <script>
-      function changeClass(link, section){
-        document.getElementById('homelink').className = "notselected";
-        document.getElementById('aboutlink').className = "notselected";
-        document.getElementById('tutoringlink').className = "notselected";
-        document.getElementById('contactlink').className = "notselected";
-        document.getElementById('testimonialslink').className = "notselected";
-        document.getElementById('faqlink').className = "notselected";
-        document.getElementById(link).className = "selected";
-      }
-    </script>
+    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js" async></script>
     <title>Maths Makes My Day | Maths, Science and German tutoring</title>
   </head>
   
@@ -37,32 +26,20 @@
     <script>(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 
     <header>
+      <img src="Logo.gif" alt="Maths Makes My Day Logo" class="homeLogo">
       <h1>Maths Makes My Day</h1>
       <h2>Let Maths Make Your Day Too</h2>
     </header>
     
-    <!--
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="selected">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="tutoring.html">Tutoring</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="#publications" class="selected">Publications</a></li>
-      </ul>
-    </nav>
-    -->
-    
-    <nav>
-      <ul>
-        <li onclick="changeClass('homelink', 'home')"><a href="#home" id="homelink" class="selected">Home</a></li>
-        <li onclick="changeClass('aboutlink', 'about')"><a href="#about" id="aboutlink" class="notselected">About</a></li>
-        <li onclick="changeClass('tutoringlink', 'tutoring')"><a href="#tutoring" id="tutoringlink" class="notselected">Tutoring</a></li>
-        <li onclick="changeClass('contactlink', 'contact')"><a href="#contact" id="contactlink" class="notselected">Contact</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li onclick="changeClass('faqlink', 'faq')"><a href="#faq" id="faqlink" class="notselected">FAQ</a></li>
+        <li><a href="resources.html">Resources</a></li>
         <li><a href="publications.html">Publications</a></li>
       </ul>
     </nav>
@@ -168,19 +145,19 @@
     </section>
     <section id="faq">
       <h3>Frequently Asked Questions</h3>
+      <h4>Where do you tutor?</h4>
+      <p>I am based in Melbourne, Australia, and I tutor locally in the Frankston, Cranbourne and Dandenong areas. I can come to your home or we can meet at a convenient venue such as the library or a coffee shop. I am also happy to tutor outside these areas via Skype.</p>
       <h4>How long have you been tutoring for?</h4>
       <p>I have tutored for eight years: four years in Germany and four years in Australia.</p>
       <h4>What are your qualifications and experience?</h4>
-      <p>Maths & Physics: I hold a Diplom Physiker from Friedrich-Schiller-Universität Jena in Germany and a PhD in physics from the Australian National University. My PhD was on the effects of swift heavy ion irradiation of amorphous germanium, amorphous silicon and amorphous silicon-germanium alloys. Please review my <a href="#publications">publications</a> if you would like to know more about my work.</p>
+      <p>Maths & Physics: I hold a Physik Diplom from the Friedrich-Schiller-Universität Jena in Germany and a PhD in physics from the Australian National University. My PhD was on the effects of swift heavy ion irradiation on amorphous germanium, amorphous silicon and amorphous silicon-germanium alloys. Please review my <a href="#publications">publications</a> if you would like to know more about my work.</p>
       <p>German: I am a native German speaker, and have spent the past three years tutoring for conversational German.</p>
+      <h4>Do you hold a Working With Children check?</h4>
+      <p>Yes.</p>
       <h4>Do you belong to a relevant industry association?</h4>
       <p>I have applied for accreditation with the Australian Tutoring Association.</p>
       <h4>Can you give me the contact details of anyone who has used your service before?</h4>
       <p>Yes, although for privacy reasons this is upon request only.</p>
-      <h4>Do you hold a Working With Children check?</h4>
-      <p>Yes.</p>
-      <h4>Where do you tutor?</h4>
-      <p>I am based in Melbourne, Australia, and I tutor locally in the Frankston, Cranbourne and Dandenong areas. I can come to your home or we can meet at a convenient venue such as the library or a coffee shop. I am also happy to tutor outside these areas via Skype.</p>
       <h4>Am I required to sign a contract?</h4>
       <p>No.</p>
       <h4>How long will I or my child need tutoring for?</h4>
