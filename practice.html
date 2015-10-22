@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="tutoring, maths, mathematics, test, addition, subtraction, multiplication, division">
+    <meta name="description" content="Test your maths skills in a range of topics.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Righteous' rel='stylesheet' type='text/css'>
+    <link href="tutoring.css" rel="stylesheet" type="text/css">
+    <!--Google Analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-60782696-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!--Skype-->
+    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js" async></script>
+    <title>Maths Makes My Day | Maths, Science and German tutoring | Practice</title>
+  </head>
+  
+  <body lang="en">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+
+    <header>
+      <h1>Maths Makes My Day</h1>
+      <h2>Let Maths Make Your Day Too</h2>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutoring.html">Tutoring</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="practice.html" class="selected">Practice</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+    </nav>
+    <section id="home">
+      <h3>Practice Your Maths Skills</h3>
+      <ul>
+				<li id="addition">Addition</li>
+				<li id="subtraction">Subtraction</li>
+				<li id="multiplication">Multiplication</li>
+				<li id="division">Division</li>
+				<li id="random">Surprise Me</li>
+			</ul>
+			<div id="workspace">
+			</div>
+			<script>
+				var options = ["addition", "subtraction", "multiplication", "division", "random"];
+				var score, count, streak;
+				var number1, number2, currentAnswer;
+				var equation;
+				function addListener(location, eventType, callFunction, parameters){
+					var func = window;
+					var parts = callFunction.split('.');
+					for (var i = 0; i < parts.length; i++){
+						if (func[parts[i]]){
+							func = func[parts[i]];
+						} else {
+							console.error("Trying to attach a listener to a function that does not exist. Cannot find " + callFunction + ".");
+							break;
+						}
+					}
+					if (typeof func !== "function"){
+						console.error("Trying to attach a listener to something that is not a function (" + callFunction + ").");
+					} else {
+						if (!parameters){
+							document.getElementById(location).addEventListener(eventType, func, true);
+						} else {
+							document.getElementById(location).addEventListener(eventType, function(){func(parameters);}, true);
+						}
+					}
+				}
+				for (var i = 0; i < options.length; i++){
+					addListener(options[i], "click", "loadWorkspace", options[i]);
+				}
+				function loadWorkspace(workspace){
+					var htmlCode = "";
+					htmlCode += '<p>Total score: <span id="score">0</span> of <span id="count">0</span><br>Streak: <span id="streak">0</span></p>';
+					score = 0;
+					count = 0;
+					streak = 0;
+					htmlCode += '<p id="previousQuestion"></p><div id="equation"></div>';
+					htmlCode += '<button id="checkAnswer">Check Answer</button>';
+					document.getElementById("workspace").innerHTML = htmlCode;
+					addListener("checkAnswer", "click", "checkAnswer", workspace);
+					nextProblem(workspace);
+				}
+				function nextProblem(workspace){
+					function randomNumber(range){
+						return Math.floor(Math.random() * range);
+					}
+					var htmlCode = "";
+					equation = "";
+					var operator;
+					console.log("The argument is " + workspace);
+					if (workspace === "random"){
+						var newOperator = randomNumber((options.length - 1));
+						console.log("The option is now " + newOperator);
+						workspace = options[newOperator];
+					}
+					console.log("The argument is now " + workspace);
+					switch (workspace){
+					case "addition":
+						operator = '+';
+						if (streak < 10){
+							number1 = randomNumber(10) + 1;
+							number2 = randomNumber(10) + 1;
+						} else {
+							number1 = randomNumber(streak);
+							number2 = randomNumber(streak);
+						}
+						currentAnswer = number1 + number2;
+						break;
+					case "subtraction":
+						operator = '-';
+						if (streak < 10){
+							number2 = randomNumber(10) + 1;
+							number1 = randomNumber(10) + number2;
+						} else {
+							number1 = randomNumber(streak);
+							number2 = randomNumber(streak);
+						}
+						currentAnswer = number1 - number2;
+						break;
+					case "multiplication":
+						operator = '&times;';
+						if (streak < 10){
+							number1 = randomNumber(10) + 1;
+							number2 = randomNumber(10) + 1;
+						} else {
+							number1 = randomNumber(streak);
+							number2 = randomNumber(streak);
+						}
+						currentAnswer = number1 * number2;
+						break;
+					case "division":
+						operator = '&divide;';
+						if (streak < 10){
+							currentAnswer = randomNumber(10) + 1;
+							number2 = randomNumber(10) + 1;
+						} else {
+							currentAnswer = randomNumber(streak);
+							number2 = randomNumber(streak);
+						}
+						number1 = currentAnswer * number2;
+						break;
+					}
+					htmlCode += '<div class="numberBox">' + number1 + '</div>';
+					htmlCode += '<div class="numberBox">' + operator + '</div>';
+					htmlCode += '<div class="numberBox">' + number2 + '</div>';
+					htmlCode += '<div class="numberBox">=</div>';
+					htmlCode += '<input type="number" id="answer" autofocus>';
+					equation += number1 + " " + operator + " " + number2;
+					document.getElementById("equation").innerHTML = htmlCode;
+					document.getElementById("answer").addEventListener("keypress", function() {
+							if (event.keyCode == 13) document.getElementById("checkAnswer").click();
+					});
+					document.getElementById("answer").value = null;
+					document.getElementById("answer").focus();
+				}
+				function checkAnswer(workspace){
+					var userAnswer = document.getElementById("answer").value;
+					var previousQuestion = document.getElementById("previousQuestion");
+					if (userAnswer){
+						var htmlCode = "The previous question was: " + equation;
+						htmlCode += '<br>The correct answer is: ' + currentAnswer;
+						htmlCode += '<br>You answered: ' + userAnswer;
+						if (parseFloat(userAnswer) === currentAnswer){
+							htmlCode += '. Great work!';
+							score++;
+							streak++;
+							previousQuestion.className = "correctAnswer";
+						} else {
+							streak = 0;
+							previousQuestion.className = "incorrectAnswer";
+						}
+						previousQuestion.innerHTML = htmlCode;
+						count++;
+						document.getElementById("score").innerText = score;
+						document.getElementById("count").innerText = count;
+						document.getElementById("streak").innerText = streak;
+						nextProblem(workspace);
+					}
+				}
+			</script>
+    </section>
+    <footer>
+      <!--Skype button-->
+      <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+      <div id="SkypeButton_Call_MathMakesMyDay_1"><script type="text/javascript">Skype.ui({"name": "chat","element": "SkypeButton_Call_MathMakesMyDay_1","participants": ["MathMakesMyDay"]});</script></div>
+      <!--Facebook button-->
+      <div id="fb-like" class="fb-like" data-href="https://www.facebook.com/mathsmakesmyday" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+      <!--Twitter button-->
+      <div id="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mathsmakesmyday.com/">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+      <!--Google button-->
+      <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'en-GB'}</script><div class="g-plusone" data-size="medium"></div>
+    </footer>
+  </body>
+<html>

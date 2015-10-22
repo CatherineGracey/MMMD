@@ -121,6 +121,38 @@ button {
 /*****FAQ Page Design*****/
 
 
+/*****PRACTICE Page Design*****/
+
+.numberBox {
+	border: 5px solid green;
+	padding: 25px;
+	display: inline-block;
+	margin: auto 2px;
+	min-width: 25px;
+	text-align: center;
+	font-size: 3em;
+}
+.numberBox:nth-child(odd){
+	transform: rotate(5deg);
+}
+.numberBox:nth-child(even){
+	transform: rotate(-5deg);
+}
+#equation {
+	margin: auto;
+	display: table;
+}
+#checkAnswer, #answer {
+	margin: 15px auto 0;
+	display: block;
+}
+.correctAnswer {
+	color: green;
+}
+.incorrectAnswer {
+	color: red;
+}
+
 /*****Publications Page Design*****/
 
 #pubs {
@@ -161,6 +193,19 @@ button {
     width: 115px;
   }
 }
+
+@media (max-width: 600px){
+	.numberBox {
+		border: 5px solid green;
+		padding: 10px;
+		display: inline-block;
+		margin: auto 2px;
+		min-width: 10px;
+		text-align: center;
+		font-size: 2em;
+	}
+}
+
 @media (max-width: 500px){
   #tbphoto {
     width: 100px;
@@ -200,4 +245,19 @@ button {
     margin: 0px 0px 5px 5px;
     border: 3px #0c4c4b solid;
   }
+	.numberBox {
+		border: 0px solid green;
+		padding: 5px;
+		display: inline-block;
+		margin: auto 2px;
+		min-width: 5px;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	.numberBox:nth-child(odd){
+		transform: rotate(0deg);
+	}
+	.numberBox:nth-child(even){
+		transform: rotate(0deg);
+	}
 }
