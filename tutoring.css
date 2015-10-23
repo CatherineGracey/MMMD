@@ -167,7 +167,7 @@ button {
 
 /*****Social Media*****/
 
-#twitter, #fb-like, #SkypeButton_Call_MathMakesMyDay_1 {
+#twitter, #fb-like, #SkypeButton_Call_MathsMakesMyDay_1 {
   display: inline-block;
   margin: auto;
   padding: 0 10px;
@@ -175,7 +175,7 @@ button {
 #fb-like {
   vertical-align: 4px;
 }
-#SkypeButton_Call_MathMakesMyDay_2 img, #SkypeButton_Call_MathMakesMyDay_1 img, #SkypeButton_Call_MathMakesMyDay_2 p, #SkypeButton_Call_MathMakesMyDay_1 p {
+#SkypeButton_Call_MathsMakesMyDay_2 img, #SkypeButton_Call_MathsMakesMyDay_1 img, #SkypeButton_Call_MathsMakesMyDay_2 p, #SkypeButton_Call_MathsMakesMyDay_1 p {
   margin: 0 !important;
   vertical-align: inherit !important;
 }
