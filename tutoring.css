@@ -5,7 +5,7 @@ body {
   margin: 0;
   background-color: #0c4c4b;
 }
-header, nav, footer, section {
+header, .main-nav, footer, section {
   background-color: seashell;
   max-width: 800px;
   box-sizing: border-box;
@@ -55,9 +55,10 @@ a {
   color: black;
   text-decoration: none;
 }
-a:hover, a:focus {
+a:hover, a:focus, .jsScript:hover, .jsScript:focus {
   color: #0c4c4b;
   font-weight: bold;
+	cursor: pointer;
 }
 
 p {

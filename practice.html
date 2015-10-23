@@ -30,7 +30,7 @@
       <h2>Let Maths Make Your Day Too</h2>
     </header>
     
-    <nav>
+    <nav class="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -45,16 +45,24 @@
     </nav>
     <section id="home">
       <h3>Practice Your Maths Skills</h3>
-      <ul>
-				<li id="addition">Addition</li>
-				<li id="subtraction">Subtraction</li>
-				<li id="multiplication">Multiplication</li>
-				<li id="division">Division</li>
-				<li id="random">Surprise Me</li>
+      <nav>
+			<ul>
+				<li id="addition" class="jsScript">Addition</li>
+				<li id="subtraction" class="jsScript">Subtraction</li>
+				<li id="multiplication" class="jsScript">Multiplication</li>
+				<li id="division" class="jsScript">Division</li>
+				<li id="random" class="jsScript">Surprise Me</li>
 			</ul>
+			</nav>
 			<div id="workspace">
 			</div>
 			<script>
+				function changeClass(workspace){
+					for (var i = 0; i < options.length; i++){
+						document.getElementById(options[i]).className = "jsScript";
+					}
+					document.getElementById(workspace).className = "jsScript selected";
+				}
 				var options = ["addition", "subtraction", "multiplication", "division", "random"];
 				var score, count, streak;
 				var number1, number2, currentAnswer;
@@ -93,6 +101,7 @@
 					htmlCode += '<button id="checkAnswer">Check Answer</button>';
 					document.getElementById("workspace").innerHTML = htmlCode;
 					addListener("checkAnswer", "click", "checkAnswer", workspace);
+					changeClass(workspace);
 					nextProblem(workspace);
 				}
 				function nextProblem(workspace){
@@ -197,7 +206,7 @@
     <footer>
       <!--Skype button-->
       <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-      <div id="SkypeButton_Call_MathMakesMyDay_1"><script type="text/javascript">Skype.ui({"name": "chat","element": "SkypeButton_Call_MathMakesMyDay_1","participants": ["MathMakesMyDay"]});</script></div>
+      <div id="SkypeButton_Call_MathsMakesMyDay_1"><script type="text/javascript">Skype.ui({"name": "chat","element": "SkypeButton_Call_MathsMakesMyDay_1","participants": ["MathsMakesMyDay"]});</script></div>
       <!--Facebook button-->
       <div id="fb-like" class="fb-like" data-href="https://www.facebook.com/mathsmakesmyday" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
       <!--Twitter button-->
