@@ -1,0 +1,264 @@
+/*****Page Design*****/
+
+body {
+  font-family: 'Righteous', cursive;
+  margin: 0;
+  background-color: #0c4c4b;
+}
+header, .main-nav, footer, section {
+  background-color: seashell;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 1px #083231;
+  box-shadow: 2px 2px 2px 2px #083231;
+}
+
+/*****Element Design*****/
+
+header, nav, footer, h1, h2, h3 {
+  text-align: center;
+}
+header, nav, h1, h2, em {
+  font-family: 'Permanent Marker', cursive;
+}
+header img {
+  width: 75px;
+  max-width: 100%;
+  border-radius: 50%;
+  float: left;
+  margin: 40px 0 40px 40px;
+}
+.homeLogo {
+  width: 150px;
+  float: none;
+}
+
+nav {
+  font-size: 1.1em;
+}
+nav ul {
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+}
+.selected {
+  color: #0c4c4b;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover, a:focus, .jsScript:hover, .jsScript:focus {
+  color: #0c4c4b;
+  font-weight: bold;
+	cursor: pointer;
+}
+
+p {
+  text-align: justify;
+}
+
+/*****Home Page Design*****/
+
+
+/*****About Page Design*****/
+
+#tbphoto {
+  max-width: 100%;
+  width: 130px;
+  border-radius: 50%;
+  float: right;
+  margin: 0px 20px 20px 20px;
+  border: 5px #0c4c4b solid;
+}
+#aboutlist {
+  list-style: none;
+}
+
+/*****Tutoring Page Design*****/
+
+
+/*****Contact Page Design*****/
+
+#contactlist li {
+  list-style: none;
+  padding: 10px;
+}
+form {
+  padding: 10px;
+  margin: 10px auto;
+}
+input {
+  width: 100%;
+  margin: 5px auto;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  margin: 5px auto;
+}
+button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 1px #083231;
+  box-shadow: 2px 2px 2px 2px #083231;
+  background-color: #0c4c4b;
+  color: seashell;
+  font-weight: bold;
+}
+
+/*****Testimonials Page Design*****/
+
+
+/*****FAQ Page Design*****/
+
+
+/*****PRACTICE Page Design*****/
+
+.numberBox {
+	border: 5px solid green;
+	padding: 25px;
+	display: inline-block;
+	margin: auto 2px;
+	min-width: 25px;
+	text-align: center;
+	font-size: 3em;
+}
+.numberBox:nth-child(odd){
+	transform: rotate(5deg);
+}
+.numberBox:nth-child(even){
+	transform: rotate(-5deg);
+}
+#equation {
+	margin: auto;
+	display: table;
+}
+#checkAnswer, #answer {
+	margin: 15px auto 0;
+	display: block;
+}
+.correctAnswer {
+	color: green;
+}
+.incorrectAnswer {
+	color: red;
+}
+
+/*****Publications Page Design*****/
+
+#pubs {
+  padding: 0px;
+}
+#pubs li {
+  list-style: none;
+  padding: 1em 0;
+  text-align: justify;
+}
+
+/*****Social Media*****/
+
+#twitter, #fb-like, #SkypeButton_Call_MathsMakesMyDay_1 {
+  display: inline-block;
+  margin: auto;
+  padding: 0 10px;
+}
+#fb-like {
+  vertical-align: 4px;
+}
+#SkypeButton_Call_MathsMakesMyDay_2 img, #SkypeButton_Call_MathsMakesMyDay_1 img, #SkypeButton_Call_MathsMakesMyDay_2 p, #SkypeButton_Call_MathsMakesMyDay_1 p {
+  margin: 0 !important;
+  vertical-align: inherit !important;
+}
+
+/*****Responsive Design*****/
+
+@media (max-width: 850px){
+  #contactlist {
+    padding: 0px;
+  }
+  header, nav, footer, section {
+    width: 90%;
+    padding: 10px;
+  }
+  #tbphoto {
+    width: 115px;
+  }
+}
+
+@media (max-width: 600px){
+	.numberBox {
+		border: 5px solid green;
+		padding: 10px;
+		display: inline-block;
+		margin: auto 2px;
+		min-width: 10px;
+		text-align: center;
+		font-size: 2em;
+	}
+}
+
+@media (max-width: 500px){
+  #tbphoto {
+    width: 100px;
+    margin: 0px 0px 10px 10px;
+    border: 4px #0c4c4b solid;
+  }
+  #aboutlist {
+    list-style: none;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 320px){
+  header, nav, footer, section {
+    padding: 5px;
+  }
+  h1 {
+    1.8em;
+  }
+  h2 {
+    1.4em;
+  }
+  #contactlist li {
+    padding: 5px 0px;
+  }
+  p {
+    text-align: left;
+  }
+  header, nav, footer, section {
+    width: 90%;
+  }
+  nav li {
+    padding: 5px;
+  }
+  #tbphoto {
+    width: 85px;
+    margin: 0px 0px 5px 5px;
+    border: 3px #0c4c4b solid;
+  }
+	.numberBox {
+		border: 0px solid green;
+		padding: 5px;
+		display: inline-block;
+		margin: auto 2px;
+		min-width: 5px;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	.numberBox:nth-child(odd){
+		transform: rotate(0deg);
+	}
+	.numberBox:nth-child(even){
+		transform: rotate(0deg);
+	}
+}
